@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            align-content: center;
+           
+        }
+        header video{
+            height: 300px;
+            width: 100%;
+           object-fit: cover;
+            position:absolute;
+            z-index: -1;
+            background-size: cover;
+    
+        }
+        h1{
+            position: relative;
+            z-index: -1;
+           display: flex;
+           justify-content: center;
+           text-align: center;
+           color: white;
+          font-size: 60px;
+          padding-top:80px ;
+        }
+        nav{
+            margin-top: 100px;
+            text-align: center;
+            background-color: rgb(57, 8, 103);
+            color: whitesmoke;
+        }       
+        h2{
+            word-spacing: 10px;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            height: 80px;
+        }
+        table,th,tr,td{
+            border: 1px solid black;
+            padding-top:12px ;
+            padding-bottom: 12px;
+            padding-left: 10px;
+        }
+       .image{
+        display: flex;
+        justify-content: center;
+        border-radius: 100px;
+        border: none;
+}
+.video{
+    display: flex;
+    justify-content: center;
+       }
+       label{
+        display: block;
+         
+       }
+       input{
+        display: block;
+        padding-bottom: 20px;
+       }
+       button{
+        margin-top: 10px;
+        background-color: rgb(114, 171, 114);
+        color: white;
+        padding: 10px;
+       }
+       div.form{
+        background-color: aliceblue;
+        border-radius: 10px;
+        padding: 10px;
+       }
+    
+      
+
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted >
+            <source src="video g.mp4" type="video/mp4">
+        </video>
+        <h1>WELCOME TO MY PAGE</h1> 
+    </header>
+        <nav>
+            <h2>Table Example</h2>
+        </nav>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>32</td>
+                    </tr>
+                    <tr><td>Elsa</td>
+                    <td>25</td>
+                </tr>
+                </tbody>
+            </table>
+            <nav>
+                <h2>Image Example</h2>
+            </nav>
+           <div class="image"> <img src="image sample.jpg" alt="sample image" loading="lazy" width="50%" height="400px"></div>
+            <nav>
+                <h2>Video Example</h2>
+            </nav>
+            <div class="video"><video controls muted loop width="50%" height="400px" poster="image for video.jpg">
+                <source src="video sample.mp4" type="video/mp4">
+            </video>
+        </div>
+        <nav>
+            <h2>Contact Form</h2>
+        </nav>
+       <div class="form"><form action="#">
+            <label for="name">Name</label> 
+            <input type="text" name="name" id="name" placeholder="Enter Your Name">
+            <label for="Email">Email</label>
+            <input type="email" name="email" id="Email" placeholder="Enter Your Email">
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message" placeholder="Enter Your Message">
+            <button type="submit">Submit</button>
+        </form> 
+    </div> 
+
+
+        
+   
+</body>
+</html>

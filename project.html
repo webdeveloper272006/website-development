@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="info.html">
+    <title>project</title>
+    <style>
+          h1{
+                position: relative;
+                z-index: -1;
+               display: flex;
+               justify-content: center;
+               text-align: center;
+               color: #ffffff;
+              font-size: 60px;
+              padding-top:80px ;
+            }
+            p{
+                text-align: center;
+                color: #ffffff;
+                padding-right: 5px;
+            }
+            body{
+         background: linear-gradient(to right, #460d60, #860ed5);
+         margin: 0;
+         height: 100vh;
+         margin: 0;
+            }
+header video{
+    height: 300px;
+    width: 100%;
+   object-fit: cover;
+    position:absolute;
+    z-index: -1;
+    background-size: cover;
+   margin-top:0 ;
+      }
+      header{
+        margin:0;
+        margin-top: -40px;
+      }
+      nav{
+        background-color: black;
+        color: white;
+        text-align: center;
+     padding: 15px;
+     margin-bottom: 0;
+      }
+      a.nav{
+        text-decoration: none;
+        padding: 20px;
+        color: white;
+        transition: all;
+        transition-duration: 0.9s;
+      }
+      a.nav:hover{
+        background-color: aliceblue;
+         color: black;
+         border: black;
+         border-radius: 8px;
+         padding: 6px;
+      }
+      section{
+        margin-top: 7rem;
+      }
+      article{
+      line-height: 30px;
+      }
+      label{
+       display: flex;
+       justify-content: center;
+        color: rgb(16, 15, 15);
+        font-family: fantasy;
+        font-size: 25px;
+      }
+      p{
+        color: #ffffff;
+      }
+      li{
+        color: #ffffff;
+        transition: all;
+        transition-duration: 0.5s;
+      }
+     li:hover{
+      color: #000000;
+      cursor: default;
+     }
+     a.information{
+      color: rgb(226, 231, 236);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all;
+      transition-duration: 0.4s;
+      line-height: 45px;
+      margin-left: 10px;
+     }
+     a.information:hover{
+      font-size: 20px;
+     }
+     aside li{
+      margin-left: 10px;
+     }
+     aside label{
+      margin-top: 10px;
+     } 
+     span{
+      color: rgb(95, 14, 14);
+     }
+     span:hover{
+      color: #000000;
+     }
+     section{
+      display: flex;
+     }
+     article{
+      flex: 4;
+     }
+     aside{
+      flex: 1;
+      border: 2px solid purple;
+      border-radius: 10px;
+      box-shadow:8px 7px 10px rgb(54, 9, 54);
+     margin: 20px;
+     }
+     
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home" class="nav">Home</a>
+        <a href="#about"class="nav">About</a>
+        <a href="#services"class="nav">Services</a>
+        <a href="#our achievements"class="nav">Achievements</a>
+    </nav>
+    <header>
+        <video class="Video" autoplay muted loop width="100%" height="200px"><source src="video12.mp4" type="video/mp4"></video>
+        <h1>GREETINGS HERE!</h1>
+        <p>Lorem ipsum go-site sit amet. <b><u>SINCE 2009</u></b></p>
+    </header>
+    <section id="home">
+      <article>
+      <label for="about" id="about"> ABOUT US :</label>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, dolorem exercitationem! Culpa suscipit consequuntur inventore obcaecati maiores esse libero rerum ipsam sed quis quae, ipsa itaque aperiam nesciunt sequi nobis delectus vero vitae fugit soluta. Quaerat earum aperiam harum vitae modi deserunt asperiores qui, totam enim, ratione beatae cumque nobis nam omnis animi esse a praesentium tempora. Eum consequuntur, ducimus est natus mollitia quasi corrupti voluptatum veritatis voluptas repellat velit voluptates nam tempore sed, saepe quam nisi? Nostrum, dolor delectus.</p>
+      <label for="services" id="services"> SERVICES :</label>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto explicabo voluptatibus maiores vero magnam ipsum odio eum incidunt quis, molestias similique officiis consequuntur qui non. Autem itaque sunt esse, tempora debitis iste, officia delectus ipsum, totam sed placeat corrupti a quibusdam asperiores ipsam id eos deleniti magnam optio deserunt voluptas inventore quisquam. Aperiam repudiandae, ab non amet asperiores odit corrupti.</p>
+      <label for="our achievements" id="our achievements">OUR ACHIEVEMENTS:</label>
+      <p><li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptates voluptatem corporis sed numquam pariatur, obcaecati sequi! IN 2011.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, minus! IN 2014.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quis architecto repellat animi eum reiciendis aut sit, saepe odit! IN 2017.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore IN 2019.</li>
+      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit IN 2021.</li>
+      <li>Lorem ipsum dolor sit amet consectetur IN 2024.</li>
+      </p>
+    </article>
+    <aside>
+      <label for="information"   class="information" id="information">INFORMATION CENTER & FAQ's:</label>
+      <p>Most Frequently Asking Questions!</p>
+     <li><a href="info.html" id="work">What type of work we do?</a></li>
+      <li><a href="info.html" id="jobs">Which types of jobs we offers?</a></li>
+      <li><a href="info.html" id="address">at which country,city and area we are located?</a></li>
+      <li><a href="info.html" id="contact">Our Contact Info?</a></li>
+      <li><a href="info.html" id="sure"> we are fake OR <span> SCAM</span>? LET's Check GUARRANTY Awareness!</a></li>
+    </aside>
+    </section>
+</body>
+</html>

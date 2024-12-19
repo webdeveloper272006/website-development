@@ -5,50 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment</title>
     <link rel="stylesheet" href="work.css">
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgb(46, 14, 46);
+            color: white;
+        }
+        .temp{
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 15px;
+            width: 25%;
+          display: flex;
+          background-color: rgb(95, 40, 131);
+          color: rgb(255, 255, 255);
+         margin-left: 37%;
+         border-radius: 10px;
+          font-size: 15px;
+          padding-left: 10px;
+           flex: 1;
+           justify-content: space-between;
+           transition: all;
+           transition-duration: 0.7s;
+           box-shadow: 2px 2px 8px rgb(171, 137, 171);
+          }
+          .temp:hover{
+            background-color: rgb(143, 143, 143);
+            color: black;
+            cursor: pointer;
+          }
+          .main{
+            display: block;
+            justify-content: center;
+            flex: 1;
+            margin-top: 5rem;
+          }
+          header{
+            text-align: center;
+            margin-bottom: -50px;
+            font-size: 15px;
+            flex: 1;
+          }
+          .circle{
+            margin-left: 11rem;
+            margin-right: 40px;
+           height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: yellow;
+          }
+          .white{
+            margin-left: 11rem;
+            margin-right: 40px;
+           height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: rgb(168, 168, 168);
+          }
+    </style>
 </head>
 <body>
     <header>
         <h1>10-day forecast</h1>
     </header>
     <div class="main div">
-        <div>
+        <div class="temp">
             Today
                 <div class="circle"></div>
                 30/20<span>&#176;</span>
         </div>
-        <div>
+        <div class="temp">
             Friday11 Oct   <div class="circle"></div> 35/26<span>&#176;</span>
          </div>
-        <div>
+        <div class="temp">
             saturday12 Oct <div class="circle"></div>
            38/25<span>&#176;</span>
  </div>
-        <div>
-            Sunday13 Oct  <div class="circle"></div>
+        <div class="temp">
+            Sunday13 Oct  <div class="white"></div>
         37/27<span>&#176;</span>
      </div>
-        <div>
+        <div class="temp">
             Monday14 Oct  <div class="circle"></div>
         36/27<span>&#176;</span>
     </div>
-        <div>
-            Tuesday15 Oct  <div class="circle"></div>
+        <div class="temp">
+            Tuesday15 Oct  <div class="white"></div>
         37/27<span>&#176;</span>
     </div>
-        <div>
+        <div class="temp">
             Wednesday16 Oct  <div class="circle"></div>
             37/27<span>&#176;</span>
         </div>
-        <div>
-            Thursday17 Oct  <div class="circle"></div>
+        <div class="temp">
+            Thursday17 Oct  <div class="white"></div>
             37/27<span>&#176;</span>
         </div>
-        <div>
+        <div class="temp">
             Friday18 Oct  <div class="circle"></div>
             37/27<span>&#176;</span>
         </div>
-        <div>
-            Saturday19 Oct  <div class="circle"></div>
+        <div class="temp">
+            Saturday19 Oct  <div class="white"></div>
             37/27<span>&#176;</span>
         </div>
     </div>

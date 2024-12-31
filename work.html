@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <met
+    a charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="task.js"></script>
+    <title>DOM Manipulation</title>
+ <style>
+   #done{
+    background-color: red;
+    color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 20%;
+    padding: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  #para{
+      background-color: black;
+      color: white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      cursor: pointer;
+  }
+ </style>
 </head>
 <body>
-    
+    <div>
+        <p id="note">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At alias architecto sit eligendi rerum! Ad natus minima voluptatum. Dolorem labore aperiam laudantium ullam, nostrum beatae nulla fuga veniam doloremque quasi porro nisi, neque consequuntur quos repellendus nam sed quod quibusdam facere quisquam itaque a illo? Cupiditate recusandae odit officiis obcaecati hic? Eligendi sit vel alias doloremque labore dignissimos aliquid sequi nesciunt fuga temporibus sed saepe non sunt, autem perspiciatis, ipsum placeat optio animi quod quo, delectus asperiores. Modi vitae numquam molestias ex pariatur tempora qui libero dolores necessitatibus voluptas quibusdam deserunt temporibus in quam, voluptatum minima amet aliquam eius magnam totam eaque asperiores, laboriosam officia repudiandae! Laboriosam, maiores id nostrum adipisci laborum ipsam non! Aliquam, molestiae vero illo assumenda numquam voluptatem illum nisi id similique aspernatur consequatur aut distinctio nihil, doloribus blanditiis nesciunt dignissimos. Officia obcaecati fugit minus modi eveniet natus accusamus itaque numquam suscipit explicabo, pariatur impedit asperiores vel.
+        </p>
+        <button id="para" onclick="toggle()">Show / Hide</button>
+     
+    </div>
+    <button id="done" onclick="Hover()">Complete It!</button>
+    <script>
+        function Hover() {
+            let button = document.querySelector('#done')
+            if (button.innerHTML == "Complete It!"){
+                button.innerHTML ="Completed"
+                button.style.backgroundColor = "green"
+                button.style.fontSize = "12px"
+            }
+            else{
+                button.innerHTML="Complete It!"
+                button.style.backgroundColor = "red"
+                button.style.fontSize = "10px"
+            }
+        }
+        function toggle() {
+            para = document.getElementById('para')
+            note = document.getElementById('note')
+            if(note.style.display!='none'){
+                note.style.display = 'none'
+                para.style.backgroundColor = 'black'
+                para.style.Color ='white'
+            }
+            else{
+                note.style.display ='block'
+                para.style.backgroundColor = 'red'
+                para.style.Color = 'black'
+            }
+        }
+    </script>
 </body>
 </html>

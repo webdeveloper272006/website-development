@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // SET INTERVALS
+        
+// let timer = 0
+// function StopWatch() {
+   
+//   console.log(`time${timer},seconds`)
+//    timer+=1
+//    if(timer>=10){
+//     clearInterval(alpha)
+//    }
+// }
+//  alpha= setInterval(StopWatch,1000)
+ 
+// Create an object calculator that has following properties:
+
+let calculator={
+    a : 10,
+    b : 20,
+   add(){
+        return this.a+this.b
+    },
+    multiply(){
+        return this.a*this.b
+    }
+}
+ console.log('Addition of a and b',calculator.add());
+ console.log('Multiplication of a and b',calculator.multiply());
+ 
+// For JSON
+
+ let string = JSON.stringify(calculator)
+ console.log(string);
+ 
+// For Return in object
+
+let obj= JSON.parse(string)
+console.log(obj);
+
+
+
+    </script>
+</body>
+</html>

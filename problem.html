@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      button{
+        cursor: pointer;
+        border: 2px;
+        border-radius: 10px;
+      }
+    </style>
+</head>
+<body>
+     <!-- Question:2   Given the following JSON:
+     const person = { name: "John", age: 30, city: "New York" };
+     Write a script to display name, age, and city in an HTML <p> element. -->
+      <p id="info"></p>
+
+       <!-- Question:3Create a button that, when clicked, shows the number of times it has been clicked. -->
+      
+       <button id="clicked">Click Here</button>
+       <p id="note">The button has been clicked 0 times</p>
+
+       <!-- Question:4 Create a dropdown menu with color options (e.g., red, blue, green). When a user selects a color,
+       change the background color of the page. -->
+
+       <select name="select" id="dropdown">
+        <option value="color1" id="red">Red</option>
+        <option value="color2" id="blue">Blue</option>
+        <option value="color3" id="Yellow">Yellow</option>
+        <option value="color4" id="green">Green</option>
+       </select>
+       
+      <!-- Question:4 Create an input box and a button. When a user enters a text and clicks the button, add the text as a
+      new <li> in a list. -->
+      
+        <!-- Question:5Create an input box and a button. When a user enters a text and clicks the button, add the text as a
+        new <li> in a list. -->
+        <input type="text" id="typing" value="text" placeholder="Enter Any Item">
+        <button id="click" onclick="selectItems()">Add Items</button>
+        <ul id="list"></ul>
+<!-- 
+     Question:6 Create a paragraph and a button. When the button is clicked, toggle the visibility of the paragraph. -->
+
+     <!-- <h1>IMPORTANT MESSAGE</h1>
+     <p id="para" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nihil minima voluptas illum, at mollitia inventore vel delectus nam itaque incidunt illo! Eius, natus quo. Quos sapiente atque ipsa veritatis autem, odio dicta pariatur laboriosam nihil temporibus molestiae aliquid ipsam cupiditate dolorem itaque odit qui minima quia ratione tempore nostrum rerum. Natus enim praesentium repellendus dolores adipisci rem autem ea aperiam cum corporis iure iste corrupti voluptatem nostrum, nobis vitae ex architecto quaerat sint totam voluptatum sunt! Praesentium, voluptate blanditiis.</p>
+     <button id="toggle" onclick="toggleFunc()">Hide</button> -->
+
+     <h2>Toggle Paragraph Visibility</h2>
+
+     <!-- Paragraph -->
+     <p id="myParagraph">This is a paragraph. Click the button to toggle its visibility.</p>
+     
+     <!-- Button -->
+     <button onclick="toggleVisibility()">Toggle Visibility</button>
+    <script src="task.js">
+
+    // Question:1  Create a JSON object representing a person with properties: name, age, and hobbies. Write a
+    //  function to log all the hobbies.
+    
+    let person ={
+        Name:"John",
+        Age: 24,
+        Hobbies:"Learning,Coding,HardWorking,etc"
+    }
+    let json=JSON.stringify(person)
+    console.log(json);
+    
+//   Question:2
+
+    const person1 = { name: "John", age: 30, city: "New York" };
+        let personinfo= JSON.stringify(person1)
+     document.getElementById('info').innerHTML= personinfo;
+
+    //  Question:3
+   
+       let count=0
+      const button= document.getElementById('clicked');
+      const para =document.getElementById('note');
+      function counter() {
+        count++
+        para.innerText=`Button has been clicked ${count}times`
+      }
+      button.addEventListener("click",counter)
+
+    //   Question:4
+
+     const dropdown= document.getElementById('dropdown')
+     document.addEventListener("change",function () {
+        const selectColor=dropdown.value;
+        document.body.style.backgroundColor=selectColor
+     })
+
+  // Question:5
+      function selectItems() {
+        let item =document.getElementById('typing').value;
+        if(item){
+          let listItem=document.createElement('li');
+          listItem.textContent=item
+          document.getElementById('list').appendChild(listItem)
+          document.getElementById('typing').value=''
+        }
+      }
+      // Question:6
+
+    //  function toggleFunc() {
+    //   btn=document.getElementById('toggle')
+    //   paragraph=document.getElementById('para')
+    //   if (paragraph.style.display!=='none') {
+    //     paragraph.style.display= 'none'
+        
+    //   }
+    //   else{
+    //     paragraph.style.display ="block"
+  
+    //   }
+    //  }
+    function toggleVisibility() {
+            var paragraph = document.getElementById('myParagraph');
+            
+            // Toggle visibility by changing the display property
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block"; // Show the paragraph
+            } else {
+                paragraph.style.display = "none"; // Hide the paragraph
+            }
+          }
+</script>
+</body>
+</html>

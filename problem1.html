@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        table{
+            
+            border: 1px solid;
+            border-collapse: collapse;
+            width: 40%;
+        }
+        thead,tbody,tr,th,td{
+            border: 2px solid;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Question:2   Given the following JSON:
+     const person = { name: "John", age: 30, city: "New York" };
+     Write a script to display name, age, and city in an HTML <p> element. -->
+
+        <p id="para"></p>
+ 
+    <!-- Question:3 Create a button that, when clicked, shows the number of times it has been clicked. -->
+     
+  <div class="box"><span id="increment">0</span></div>
+  <button id="press">COUNT</button>
+
+  
+       <!-- Question:4 Create a dropdown menu with color options (e.g., red, blue, green). When a user selects a color,
+       change the background color of the page. -->
+
+       <select name="selector" id="dropdown">
+        <option value="color1">Red</option>
+        <option value="color2">Blue</option>
+        <option value="color3">Green</option>
+        <option value="color4">Yellow</option>
+       </select>
+
+      <!-- Question 5. Add Items to a List
+Create an input box and a button. When a user enters a text and clicks the button, add the text as a
+new <li> in a list. -->
+
+    <input type="text" id="user" placeholder="Insert Any Item">
+    <button id="click" onclick="addToList()">Add to Cart</button>
+    <ul id="list"></ul>
+
+    <!-- 
+     Question:6 Create a paragraph and a button. When the button is clicked, toggle the visibility of the paragraph. -->
+
+     <h1>TOGGLE IT!!</h1>
+     <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet obcaecati adipisci eius officiis! Exercitationem, placeat voluptatem, dolorem architecto illo id distinctio accusamus maxime possimus in saepe tempore ducimus quidem similique delectus consectetur fuga, qui harum laudantium incidunt fugit assumenda. Corrupti cum recusandae, vitae vel doloribus nulla reiciendis! Totam, nam itaque.</p>
+     <button id="button" onclick="toggle()">HIDE</button>
+
+    <!-- Question 7. Display Object in Table
+Given this JSON:
+const products = [
+{ name: "Laptop", price: 1000 },
+{ name: "Phone", price: 500 },
+
+];
+Write a script to display the products in an HTML table. -->
+
+
+<!-- Question 8. Highlight Even Rows
+Create a table with 10 rows. Use JavaScript to highlight the even-numbered rows with a different
+background color. -->
+
+<h2>TABLE OF 10 ROWS</h2>
+<table id="even">
+    <thead>
+   <tr>
+    <th>Courses</th>
+    <th>Fees</th>
+   </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Web Development</td>
+            <td>Rs.7000</td>
+        </tr>
+        <tr>
+        <td>Graphic Design</td>
+        <td>Rs.8000</td>
+    </tr>
+        <tr>
+            <td>Python</td>
+            <td>Rs.7000</td>
+        </tr>
+        <tr>
+            <td>Data Analysis</td>
+            <td>Rs.7000</td>
+        </tr>
+        <tr>
+            <td>Artificial Intelligence</td>
+            <td>Rs.7000</td>
+        </tr>
+        <tr>
+            <td>Word Press</td>
+            <td>Rs.7000</td>
+        </tr>
+        <tr>
+            <td>Cooking</td>
+            <td>Rs.7000</td>
+        </tr>
+        <tr>
+            <td>E-Commerce</td>
+            <td>Rs.7000</td>
+        </tr>
+        <tr>
+            <td>Web Design</td>
+            <td>Rs.7000</td>
+        </tr>
+        <tr>
+            <td>Management Science</td>
+            <td>Rs.7000</td>
+        </tr>
+    </tbody>
+</table>
+  <script src="work.js">
+
+   // Question:1  Create a JSON object representing a person with properties: name, age, and hobbies. Write a
+    //  function to log all the hobbies.
+    
+    let person ={
+        Name:"John",
+        Age: 24,
+        Hobbies:"Learning,Coding,HardWorking,etc"
+    }
+    let json=JSON.stringify(person)
+    console.log(json);
+
+    // Question:2
+
+    const person2 = { name: "John", age: 30, city: "New York" };
+   let string=JSON.stringify(person2)
+    function stringify(){
+        document.getElementById('para').innerHTML=string
+    }
+    stringify()
+
+    // Question:3
+
+        let counting=1
+        function counts(){
+            document.getElementById('increment').innerHTML=counting
+            counting++
+        }
+        document.getElementById('press').addEventListener("click",counts)
+
+        // Question:4
+ 
+        document.getElementById('dropdown').addEventListener("change", function() {
+            // Get the selected color
+           let selectedColor = this.value;
+            // Change the background color of the body
+            document.body.style.backgroundColor = selectedColor;
+        });
+
+        // Question:5
+
+        function addToList() {
+            // Get the input value
+            let item = document.getElementById('user').value;
+
+            // Check if the input is not empty
+            if (item) {
+                // Create a new list item
+                let li = document.createElement('li');
+                li.textContent = item; // Set the text of the list item
+                // Append the new list item to the list
+                document.getElementById('list').appendChild(li);
+
+                // Clear the input field
+                document.getElementById('user').value = '';
+            }
+        }
+
+        // Question:6
+
+        function toggle() {
+            let btn=document.getElementById('button')
+            let paragraph=document.getElementById('para')
+            if(paragraph.style.display!=='none'){
+                paragraph.style.display= 'none'
+                btn.innerText= 'SHOW'
+            }
+            else{
+                paragraph.style.display='block'
+                btn.innerText='HIDE'
+            }
+        }
+
+        // Question:7
+
+//         const products = [
+// { name: "Laptop", price: 1000 },
+// { name: "Phone", price: 500 },
+
+// ];
+
+// Question:8
+
+function evenNum() {
+   let table= document.getElementById('even')
+    
+}
+
+    </script>
+</body>
+</html>
